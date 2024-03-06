@@ -4,9 +4,15 @@ plugins {
 
 android {
     namespace 'com.example.myapplication'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
+        externalNativeBuild{
+            cmake {
+                cppFlags "-frtti -fexceptions"
+                abiFilters 'armeabi-v7a', 'arm64-v7a'
+            }
+        }
         applicationId "com.example.myapplication"
         minSdk 26
         targetSdk 33

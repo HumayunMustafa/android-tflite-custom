@@ -17,3 +17,7 @@ set_target_properties(tflite PROPERTIES IMPORTED_LOCATION
         )
 
 #####################tflite dependencies###################
+
+add_library(selfie-segmentation/selfie-segmentation.cc)
+
+target_link_libraries(tflite)
